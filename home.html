@@ -137,7 +137,7 @@
       }
 
       h5 {
-        font-family: "Helvetica Nueue";
+        font-family: "Arial";
         font-size: 45px;
       }
 
@@ -243,6 +243,15 @@
         display: none;
       }
 
+      /* Right-Alignment */
+      .right {
+        float:right;
+      }
+
+      /* Left-Alignment */
+      .left {
+        float:left;
+      }
     </style>
 
     
@@ -388,15 +397,18 @@
         <div class="row py-lg-5" id="home">
           <div class="col-lg-6 col-md-8 mx-auto">
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <h5><b>Barrio Rainier Vista</b></h5>
             <h2 class="fw-light">La Iglesia de Jesucristo de los Santos de los Últimos Días</h2>
+            <p id = "date"></p>
+            <script>
+                var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                currentDate = new Date();
+                year = currentDate.getFullYear();
+                month = currentDate.getMonth();
+                day = currentDate.getDate();
+                document.getElementById("date").innerHTML = day + " " + month + " " + year;
+            </script>
+            
           </div>
         </div>
       </section>
@@ -404,7 +416,12 @@
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light" style="font-size:40px">Alejandra Mariel Ordoñez Rodriguez</h1>
+            <span class="right">Preside</span>
+            <span class="left">Obispo Bernal</span>
+            <span class="right">Dirige</span>
+            <span class="left">Hno. Galán</span>
+
+            
             <h1 class="fw-light" style="font-size:40px">&</h1>
             <h1 class="fw-light" style="font-size:40px">Fernando Trujillo</h1>
           </div>
