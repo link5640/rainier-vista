@@ -439,22 +439,12 @@
                         <p class="fw-light" style="font-size:20px">Administración de la Santa Cena</p>
                         <br>
 
-                        <script>
-                            //var currentDate = new Date();
-                            //var firstWeek = currentDate.getDate();
-                            //var day = currentDate.getDay();
-                            
-                            //document.getElementById("date").innerHTML = currentDate + "===" + firstWeek + "---" + day;
-
-
-                        </script>
-
-                        <!-- <b><p id="printDate"></p></b> -->
-
-                        <div id="fastSunday">
+                        <!-- FAST SUNDAY -->
+                        <div id="fastSunday" hidden>
                             <div class="text-center" id="countdown"><p class="fw-bold" style="font-size:30px">Testimonios</p></div>
                         </div>
 
+                        <!-- REGULAR SUNDAY -->
                         <div id="regularSunday">
                             <span class="left"><b>Discursante</b></span>
                             <span class="right">Hno.</span>
@@ -470,7 +460,8 @@
                             <span class="right">Hno.</span>
                         </div>
 
-                        <script>
+                        <!-- Come back to this (currently not working) -->
+                        <!-- <script>
                             currentDate = new Date();
                             day         = currentDate.getDate();
                             dayOfWeek = currentDate.getDay();
@@ -487,7 +478,7 @@
                                     document.getElementById("regularSunday").hidden = "true";
                                 }
                             }
-                        </script>
+                        </script> -->
                         
                         <br>
                         <br>
@@ -522,7 +513,7 @@
                         
                         <p><b>Baile de Padre e Hija</b><br>
                             La Estaca de Renton invita a todos las mujeres jóvenes y niñas sde la Primaria con sus padres al baile de San Valentín para Padres e Hijas.
-                            El baile se llevará a cabo el <strong>Sábado, 4 Febrero 2023</strong> de <strong>6:30PM a 8:00PM</strong> en el <strong>Centro de Estaca en Renton</strong>.
+                            El baile se llevará a cabo el <b>Sábado, 4 Febrero 2023</b> de <b>6:30PM a 8:00PM</b> en el <b>Centro de Estaca en Renton</b>.
                             Todas las niñas de la Primaria y las mujeres jóvenes con 18 años o menos están invitados a asistir el baile.
                             Al vestir en ropa de Domingo no es necesario, y habrá refrigerio, juegos, y un estación de fotos para disfrutar la noche.
                             <br>
@@ -562,7 +553,16 @@
                     <div class="d-flex justify-content-center">
                         <i class="fas fa-info fa-3x"></i>
                     </div>
-                    <p class="card-text text-center">Si gustaría agregrar un anuncio para el programa, por favor envíe un mensaje por medio de WhatsApp con los detalles.</p>
+                    <p class="card-text text-center">Si gustaría agregrar un anuncio para el programa, por favor envíe un mensaje por medio de WhatsApp con los detalles.
+                        <br>
+                        Por ejemplo:
+                        <ul>
+                            <li>La fecha y hora</li>
+                            <li>El lugar con la dirección</li>
+                            <li>Una descripción de la actividad o evento</li>
+                            <li>El folleto (si hay)</li>
+                        </ul>
+                    </p>
                     <a aria-label="Chatear en WhatsApp" href="https://wa.me/19168604050" target="_blank">
                         <img src="images/WhatsAppButtonGreenLarge.jpg" class="img-fluid" alt="Chatear en WhatsApp">
                     </a>
