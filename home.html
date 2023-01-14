@@ -438,6 +438,8 @@
                             var currentDate = new Date();
                             var firstWeek = currentDate.getDate();
                             var day = currentDate.getDay();
+                            
+                            document.getElementById("date").innerHTML = currentDate + "===" + firstWeek + "---" + day;
 
                             if (firstWeek <= 7 && day == 0) {
                                 // First Sunday of the Month - Testimony Meeting
@@ -449,8 +451,10 @@
                             }
                         </script>
 
+                        <b><p id="date"></p></b>
+
                         <div id="fastSunday">
-                            <div class="text-center" id="countdown"><p class="fw-light" style="font-size:30px">Testimonios</p></div>
+                            <div class="text-center" id="countdown"><p class="fw-bold" style="font-size:30px">Testimonios</p></div>
                         </div>
 
                         <div id="regularSunday">
