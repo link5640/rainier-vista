@@ -143,6 +143,10 @@
                 width: 100%;
             }
 
+            cardFont {
+                font-size: 25px;
+            }
+
             i {
                 text-align: center;
             }
@@ -393,19 +397,6 @@
                             month       = currentDate.getMonth();
                             day         = currentDate.getDate();
                             document.getElementById("date").innerHTML = day + " " + months[month] + " " + year;
-
-                            dayOfWeek = currentDate.getDay();
-
-                            // day is the actual day of the month
-                            // dayOfWeek: Monday = 1, Tuesday = 2, ... Sunday = 7
-                            if (day <= 7 && dayOfWeek == 7) {
-                                // First Sunday of the Month - Testimony Meeting
-                                document.getElementById("fastSunday").hidden = "false";
-                                document.getElementById("regularSunday").hidden = "true";
-                            } else {
-                                document.getElementById("fastSunday").hidden = "true";
-                                document.getElementById("regularSunday").hidden = "false";
-                            }
                         </script>
                     </div>
                 </div>
@@ -478,6 +469,23 @@
                             <span class="left"><b>Discursante</b></span>
                             <span class="right">Hno.</span>
                         </div>
+
+                        <script>
+                            currentDate = new Date();
+                            day         = currentDate.getDate();
+                            dayOfWeek = currentDate.getDay();
+
+                            // day is the actual day of the month
+                            // dayOfWeek: Monday = 1, Tuesday = 2, ... Sunday = 7
+                            if (day <= 7 && dayOfWeek == 7) {
+                                // First Sunday of the Month - Testimony Meeting
+                                document.getElementById("fastSunday").hidden = "false";
+                                document.getElementById("regularSunday").hidden = "true";
+                            } else {
+                                document.getElementById("fastSunday").hidden = "true";
+                                document.getElementById("regularSunday").hidden = "false";
+                            }
+                        </script>
                         
                         <br>
                         <br>
@@ -569,7 +577,7 @@
                 <div class="card mx-auto" style="width: 18rem;">
                     <img class="card-img-top" style="border-radius: 25%" src="images/gospelLibrary.png" alt="Gospel Library iPhone App">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Biblioteca del Evangelio</h5>
+                        <cardFont class="card-title text-center">Biblioteca del Evangelio</cardFont>
                         <a href="https://apps.apple.com/co/app/biblioteca-del-evangelio/id598329798" target="_blank">
                             <img src="images/descargaloEnElAppStore.png" class="img-fluid">
                         </a>
@@ -585,7 +593,7 @@
                 <div class="card mx-auto" style="width: 18rem;">
                     <img class="card-img-top" style="border-radius: 25%" src="images/hymnsAppIcon.png" alt="Sacred Music iPhone App">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Música Sagrada</h5>
+                        <cardFont class="card-title text-center">Música Sagrada</cardFont>
                         <a href="https://apps.apple.com/es/app/música-sagrada/id463553380" target="_blank">
                             <img src="images/descargaloEnElAppStore.png" class="img-fluid">
                         </a>
@@ -601,7 +609,7 @@
                 <div class="card mx-auto" style="width: 18rem;">
                     <img class="card-img-top" style="border-radius: 25%" src="images/memberToolsAppIcon.png" alt="Member Tools iPhone App">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Member Tools</h5>
+                        <cardFont class="card-title text-center">Member Tools</cardFont>
                         <a href="https://apps.apple.com/mx/app/herramientas-para-miembros/id391093033" target="_blank">
                             <img src="images/descargaloEnElAppStore.png" class="img-fluid">
                         </a>
@@ -617,7 +625,7 @@
                 <div class="card mx-auto" style="width: 18rem;">
                     <img class="card-img-top" style="border-radius: 25%" src="images/familySearchTreeAppIcon.png" alt="Member Tools iPhone App">
                     <div class="card-body">
-                        <h5 class="card-title text-center">FamilySearch</h5>
+                        <cardFont class="card-title text-center">FamilySearch</cardFont>
                         <a href="https://apps.apple.com/mx/app/familysearch-árbol/id885982973" target="_blank">
                             <img src="images/descargaloEnElAppStore.png" class="img-fluid">
                         </a>
