@@ -392,6 +392,19 @@
                             month = currentDate.getMonth();
                             day = currentDate.getDate();
                             document.getElementById("date").innerHTML = day + " " + months[month] + " " + year;
+
+                            rday = currentDate.getDay();
+                            document.getElementById("printDate").innerHTML = day + "___" + rday;
+
+                            if (firstWeek <= 7 && day == 0) {
+                                // First Sunday of the Month - Testimony Meeting
+                                document.getElementById("fastSunday").style.visibility = "visible";
+                                document.getElementById("regularSunday").style.visibility = "hidden";
+                            } else {
+                                document.getElementById("fastSunday").style.visibility = "hidden";
+                                document.getElementById("regularSunday").style.visibility = "visible";
+                            }
+
                         </script>
                     </div>
                 </div>
@@ -435,23 +448,16 @@
                         <br>
 
                         <script>
-                            var currentDate = new Date();
-                            var firstWeek = currentDate.getDate();
-                            var day = currentDate.getDay();
+                            //var currentDate = new Date();
+                            //var firstWeek = currentDate.getDate();
+                            //var day = currentDate.getDay();
                             
-                            document.getElementById("date").innerHTML = currentDate + "===" + firstWeek + "---" + day;
+                            //document.getElementById("date").innerHTML = currentDate + "===" + firstWeek + "---" + day;
 
-                            if (firstWeek <= 7 && day == 0) {
-                                // First Sunday of the Month - Testimony Meeting
-                                document.getElementById("fastSunday").style.visibility = "visible";
-                                document.getElementById("regularSunday").style.visibility = "hidden";
-                            } else {
-                                document.getElementById("fastSunday").style.visibility = "hidden";
-                                document.getElementById("regularSunday").style.visibility = "visible";
-                            }
+
                         </script>
 
-                        <b><p id="date"></p></b>
+                        <!-- <b><p id="date"></p></b> -->
 
                         <div id="fastSunday">
                             <div class="text-center" id="countdown"><p class="fw-bold" style="font-size:30px">Testimonios</p></div>
