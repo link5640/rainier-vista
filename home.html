@@ -441,19 +441,19 @@
 
                             if (firstWeek <= 7 && day == 0) {
                                 // First Sunday of the Month - Testimony Meeting
-                                document.getElementById("fastSunday").hidden = false;
-                                document.getElementById("regularSunday").hidden = true;
+                                document.getElementById("fastSunday").style.visibility = "visible";
+                                document.getElementById("regularSunday").style.visibility = "hidden";
                             } else {
-                                document.getElementById("fastSunday").hidden = true;
-                                document.getElementById("regularSunday").hidden = false;
+                                document.getElementById("fastSunday").style.visibility = "hidden";
+                                document.getElementById("regularSunday").style.visibility = "visible";
                             }
                         </script>
 
-                        <div id="fastSunday" hidden>
+                        <div id="fastSunday">
                             <div class="text-center" id="countdown"><p class="fw-light" style="font-size:30px">Testimonios</p></div>
                         </div>
 
-                        <div id="regularSunday" hidden>
+                        <div id="regularSunday">
                             <span class="left"><b>Discursante</b></span>
                             <span class="right">Hno.</span>
                             <br>
