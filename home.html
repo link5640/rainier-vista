@@ -387,25 +387,25 @@
                         <b><p id = "date"></p></b>
                         <b><p id="printDate"></p></b>
                         <script>
-                            var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                            var months  = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
                             currentDate = new Date();
-                            year = currentDate.getFullYear();
-                            month = currentDate.getMonth();
-                            day = currentDate.getDate();
+                            year        = currentDate.getFullYear();
+                            month       = currentDate.getMonth();
+                            day         = currentDate.getDate();
                             document.getElementById("date").innerHTML = day + " " + months[month] + " " + year;
 
-                            rday = currentDate.getDay();
-                            document.getElementById("printDate").innerHTML = day + "___" + rday;
+                            dayOfWeek = currentDate.getDay();
 
-                            if (firstWeek <= 7 && day == 0) {
+                            // day is the actual day of the month
+                            // dayOfWeek: Monday = 1, Tuesday = 2, ... Sunday = 7
+                            if (day <= 7 && dayOfWeek == 7) {
                                 // First Sunday of the Month - Testimony Meeting
-                                document.getElementById("fastSunday").style.visibility = "visible";
+                                document.getElementById("fastSunday").style.visibility    = "visible";
                                 document.getElementById("regularSunday").style.visibility = "hidden";
                             } else {
-                                document.getElementById("fastSunday").style.visibility = "hidden";
+                                document.getElementById("fastSunday").style.visibility    = "hidden";
                                 document.getElementById("regularSunday").style.visibility = "visible";
                             }
-
                         </script>
                     </div>
                 </div>
@@ -567,13 +567,13 @@
                 </div>
 
                 <div class="card mx-auto" style="width: 18rem;">
-                    <img class="card-img-top rounded-25" style="border-radius: 25%" src="images/memberToolsAppIcon.png" alt="Member Tools iPhone App">
+                    <img class="card-img-top" style="border-radius: 25%" src="images/gospelLibrary.png" alt="Gospel Library iPhone App">
                     <div class="card-body">
                         <h5 class="card-title text-center">Member Tools</h5>
-                        <a href="https://apps.apple.com/mx/app/herramientas-para-miembros/id391093033" target="_blank">
+                        <a href="https://apps.apple.com/co/app/biblioteca-del-evangelio/id598329798" target="_blank">
                             <img src="images/descargaloEnElAppStore.png" class="img-fluid">
                         </a>
-                        <a href="https://play.google.com/store/apps/details?id=org.lds.ldstools&hl=es_NI&gl=US" target="_blank">
+                        <a href="https://play.google.com/store/apps/details?id=org.lds.ldssa&hl=es_US&gl=US" target="_blank">
                             <img src="images/google-play-badge.png" class="img-fluid">
                         </a>
                     </div>
@@ -583,7 +583,39 @@
                 <br>
 
                 <div class="card mx-auto" style="width: 18rem;">
-                    <img class="card-img-top rounded-25" style="border-radius: 25%" src="images/familySearchTreeAppIcon.png" alt="Member Tools iPhone App">
+                    <img class="card-img-top" style="border-radius: 25%" src="images/hymnsAppIcon.png" alt="Sacred Music iPhone App">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Member Tools</h5>
+                        <a href="https://apps.apple.com/es/app/música-sagrada/id463553380" target="_blank">
+                            <img src="images/descargaloEnElAppStore.png" class="img-fluid">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=org.lds.ldsmusic&hl=es_US&gl=US" target="_blank">
+                            <img src="images/google-play-badge.png" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img class="card-img-top" style="border-radius: 25%" src="images/memberToolsAppIcon.png" alt="Member Tools iPhone App">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Member Tools</h5>
+                        <a href="https://apps.apple.com/mx/app/herramientas-para-miembros/id391093033" target="_blank">
+                            <img src="images/descargaloEnElAppStore.png" class="img-fluid">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=org.lds.ldstools&hl=es_US&gl=US" target="_blank">
+                            <img src="images/google-play-badge.png" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img class="card-img-top" style="border-radius: 25%" src="images/familySearchTreeAppIcon.png" alt="Member Tools iPhone App">
                     <div class="card-body">
                         <h5 class="card-title text-center">FamilySearch</h5>
                         <a href="https://apps.apple.com/mx/app/familysearch-árbol/id885982973" target="_blank">
