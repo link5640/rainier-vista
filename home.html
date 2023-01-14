@@ -400,11 +400,11 @@
                             // dayOfWeek: Monday = 1, Tuesday = 2, ... Sunday = 7
                             if (day <= 7 && dayOfWeek == 7) {
                                 // First Sunday of the Month - Testimony Meeting
-                                document.getElementById("fastSunday").style.visibility    = "visible";
-                                document.getElementById("regularSunday").style.visibility = "hidden";
+                                document.getElementById("fastSunday").hidden = "false";
+                                document.getElementById("regularSunday").hidden = "true";
                             } else {
-                                document.getElementById("fastSunday").style.visibility    = "hidden";
-                                document.getElementById("regularSunday").style.visibility = "visible";
+                                document.getElementById("fastSunday").hidden = "true";
+                                document.getElementById("regularSunday").hidden = "false";
                             }
                         </script>
                     </div>
