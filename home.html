@@ -434,18 +434,40 @@
                         <p class="fw-light" style="font-size:20px">Administración de la Santa Cena</p>
                         <br>
 
-                        <span class="left"><b>Discursante</b></span>
-                        <span class="right">Hno.</span>
-                        <br>
-                        <br>
+                        <script>
+                            var currentDate = new Date();
+                            var firstWeek = currentDate.getDate();
+                            var day = currentDate.getDay();
 
-                        <span class="left"><b>Himno Intermedio</b></span>
-                        <span class="right"><a href="https://www.churchofjesuschrist.org/study/manual/hymns/let-us-all-press-on?lang=spa">#58 Trabajemos Hoy en la Obra</a></span>
-                        <br>
-                        <br>
+                            if (firstWeek <= 7 && day == 0) {
+                                // First Sunday of the Month - Testimony Meeting
+                                document.getElementById("fastSunday").hidden = false;
+                                document.getElementById("regularSunday").hidden = true;
+                            } else {
+                                document.getElementById("fastSunday").hidden = true;
+                                document.getElementById("regularSunday").hidden = false;
+                            }
+                        </script>
 
-                        <span class="left"><b>Discursante</b></span>
-                        <span class="right">Hno.</span>
+                        <div id="fastSunday">
+                            <div class="text-center" id="countdown"><p class="fw-light" style="font-size:20px">Testimonios</p></div>
+                        </div>
+
+                        <div id="regularSunday">
+                            <span class="left"><b>Discursante</b></span>
+                            <span class="right">Hno.</span>
+                            <br>
+                            <br>
+
+                            <span class="left"><b>Himno Intermedio</b></span>
+                            <span class="right"><a href="https://www.churchofjesuschrist.org/study/manual/hymns/let-us-all-press-on?lang=spa">#58 Trabajemos Hoy en la Obra</a></span>
+                            <br>
+                            <br>
+
+                            <span class="left"><b>Discursante</b></span>
+                            <span class="right">Hno.</span>
+                        </div>
+                        
                         <br>
                         <br>
 
