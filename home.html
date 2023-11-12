@@ -55,13 +55,15 @@
             }
 
             .parallax {
-                background-image: url("images/seattle-temple3.jpeg");
+                /*background-image: url("images/seattle-temple3.jpeg");*/
+                background-image: url("images/primary-2023.jpg");
                 min-height: 500px;
 
                 background-attachment: fixed;
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: cover;
+                /* background-size: cover; */
+                background-size: contain;
             }
 
             .parallax2 {
@@ -355,8 +357,8 @@
                 </div>
             </nav>
 
-            <jumbotron>
-                <div><span class="right" style="color:white; font-size:xx-small; text-shadow: 5px 5px 7px black;"><i>Foto tomado por Fernando Trujillo</i></span></div>
+            <jumbotron hidden>
+                <div hidden><span class="right" style="color:white; font-size:xx-small; text-shadow: 5px 5px 7px black;"><i>Foto tomado por Fernando Trujillo</i></span></div>
                 <div class="parallax p-5 mb-4 bg-light">
                     <div class="container-fluid py-5">
                         <br>
@@ -403,8 +405,10 @@
                     
                 </div>
             </jumbotron>
-            
-            
+
+            <div class="text-center">
+                <img src="images/primary-2023.jpg" class="img-fluid">
+            </div>
         </header>
 
         
@@ -451,10 +455,16 @@
                 </div>
             </section>
 
+            <!-- <span class="placeholder col-12 bg-primary"></span>
+            <span class="placeholder col-12 bg-warning"></span>
+            <span class="placeholder col-12 bg-danger"></span> -->
+
             <section class="py-5 text-center container">
                 <div class="row py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
-                        <h2 class="fw-bold">La Reunión Sacramental</h2>
+                        <h2 class="fw">Reunión Sacramental</h2>
+                        <h2 class="fw-bold">Presentación de Primaria</h2>
+                        <h4 class="fw">Ven, Sígueme | Nuevo Testamento 2023</h3><br>
 
                         <span class="left"><b>Preside</b></span>
                         <span class="right">Obispo Stabio</span>
@@ -468,12 +478,13 @@
                         <br>
 
                         <span class="left"><b>Primer Himno</b></span>
-                        <span class="right"><a href="https://www.churchofjesuschrist.org/study/manual/hymns/now-let-us-rejoice?lang=spa">#3 Ya Regocijemos</a></span>
+                        <span class="right"><a href="https://www.churchofjesuschrist.org/study/manual/hymns/redeemer-of-israel?lang=spa">#5 Oh Dios de Israel</a></span>
                         <br>
                         <br>
 
                         <span class="left"><b>Primera Oración</b></span>
-                        <span class="right">Por Invitación</span>
+                        <!-- <span class="right">Por Invitación</span> -->
+                        <span class="right">Hnita. Camila Stabio</span>
                         <br>
                         <br>
 
@@ -481,7 +492,7 @@
                         <br>
 
                         <span class="left"><b>Himno Sacramental</b></span>
-                        <span class="right"><a href="https://www.churchofjesuschrist.org/study/manual/hymns/how-great-the-wisdom-and-the-love?lang=spa">#116 Jesús, en la Corte Celestial</a></span>
+                        <span class="right"><a href="https://www.churchofjesuschrist.org/study/manual/hymns/while-of-these-emblems-we-partake-saul?lang=spa">#103 La Santa Cena</a></span>
                         <br>
                         <br>
 
@@ -494,7 +505,7 @@
                         </div>
 
                         <!-- REGULAR SUNDAY -->
-                        <div id="regularSunday">
+                        <div id="regularSunday" hidden>
                             <span class="left"><b>Discursante</b></span>
                             <span class="right"></span>
                             <br>
@@ -512,6 +523,24 @@
                             <span class="left"><b>Discursante</b></span>
                             <span class="right"></span>
                         </div>
+
+                        <div id="primaryProgram">
+                            <div class="text-center"><p class="fw-bold" style="font-size:30px">Programa de la Primaria</p></div>
+                        </div>
+
+                        
+                            <ul class="py-1">
+                                <span class="left" style="text-indent: 70px;"><b>Director de Música</b></span>
+                                <span class="left" style="text-indent: 70px;">Hna. Betty Alonzo</span>
+                                <br>
+                                <span class="left" style="text-indent: 70px;"><b>Pianista</b></span>
+                                <span class="left" style="text-indent: 154px;">Hno. Keith Orton</span>
+                            </ul>
+
+                            La Santa Cena, al tomar,
+                            a Cristo quiero recordar,
+                            mostrándole de corazón
+                            que limpio soy por Su perdón.
 
                         <!-- Come back to this (currently not working) -->
                         <!-- <script>
@@ -537,13 +566,38 @@
                         <br>
 
                         <span class="left"><b>Último Himno</b></span>
-                        <span class="right"><a href="https://www.churchofjesuschrist.org/study/manual/hymns/how-firm-a-foundation?lang=spa">#40 Qué Firme Cimientos</a></span>
+                        <span class="right"><a href="#himno">#198 Hazme Andar en la Luz</a></span>
                         <br>
                         <br>
 
                         <span class="left"><b>Última Oración</b></span>
-                        <span class="right">Por Invitación</span>
+                        <span class="right">Hnito. Nathan Samayoa</span>
                     </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5" style="font-size:30px" id="himno">
+                    <h2 class="fw-bold text-center">Hazme Andar en la Luz</h2>
+                    <p><b>(Niños)</b></p>
+                    <p><b>1. </b>Hazme en la luz de Su amor caminar.</p>
+                    <p>Muéstrame cómo a mi Padre orar.</p>
+                    <p>Quiero vivir como dijo Jesús.</p>
+                    <p>Dime cómo andar en la luz.</p><br><br>
+
+                    <p><b>(Congregación)</b></p>
+                    <p><b>2. </b>Ven, pequeñito, y juntos los dos</p>
+                    <p>aprenderemos las leyes de Dios</p>
+                    <p>para volver a vivir con Jesús,</p>
+                    <p>para siempre andar en la luz.</p><br><br>
+
+                    <p><b>(Todos Juntos)</b></p>
+                    <p><b>3. </b>Padre, las gracias queremos rendir,</p>
+                    <p>pues nos enseñas la senda a seguir.</p>
+                    <p>A ti loores cantamos, oh Dios.</p>
+                    <p>Juntos vamos a andar en la luz.</p>
                 </div>
             </section>
 
@@ -560,6 +614,34 @@
                             La Primaria del Barrio Rainier Vista tendrá su programa anual el <b>Domingo</b>, <b>12 Noviembre</b> en la <b>Capilla Skyway</b>.
                         </p>
 
+                        <p><b>Cena de Acción de Gracias</b><br>
+                            Tendremos nuestra cena de Acción de Gracias el <b>Viernes</b>, <b>17 Noviembre</b> a las <b>6:30PM</b> en la <b>Capilla Skyway</b>.
+                        </p>
+                        <div class="card card-body" style="border-radius: 0em; padding: 0em 0em 0em;">
+                            <img src="images/thanksgiving2023.jpg" class="img-fluid">
+                        </div><br><br>
+
+                        <p><b>Bautismos en el Templo</b><br>
+                            Los Jóvenes tendrá la oportunidad de participar en bautismos para los muertos en el <b>Templo de Seattle</b> el <b>18 Noviembre 2023</b>. También los miembros están invitados a asistir la sesión del templo a las <b>6:00PM</b>.
+                        </p>
+
+                        <p><b>Charla Fogonera Regional</b><br>
+                            La Estaca de Renton invita a todos los miembros de la Región Norte de Seattle a una Charla Fogonera que se llevará a cabo el <b>Domingo</b>, <b>19 Diciembre 2023</b> a las <b>6:30PM</b> en el
+                            <b><a href="https://maps.app.goo.gl/W4BVkCazrJCcAmQq9">
+                               <a href="https://maps.apple.com/?address=8220%20S%20126th%20St,%20Seattle,%20WA%20%2098178,%20United%20States&auid=10387447408727218346&ll=47.490376,-122.229557&lsp=9902&q=The%20Church%20of%20Jesus%20Christ%20of%20Latter-day%20Saints">
+                                Centro de Estaca de Renton.
+                               </a></a></b>
+                        </p>
+                        <div class="card card-body" style="border-radius: 0em; padding: 0em 0em 0em;">
+                            <img src="images/charlaFogonera.jpeg" class="img-fluid">
+                        </div>
+
+                        <br><br>
+
+                        <p><b>Devocional Mundial Para Jóvenes Adultos</b><br>
+                            El Élder Quentin L. Cook y su esposa, la hermana Mary Cook, ofrecerán un mensaje especial a los jóvenes adultos de todo el mundo el <b>19 Noviembre</b> a las <b>5:00PM</b>. Para más información: <a href="https://www.churchofjesuschrist.org/media/broadcasts/worldwide-devotional-for-young-adults-elder-cook?lang=spa" target=_blank"">Haga clic aqui</a>.
+                        </p>
+
                         <!-- <div class="card mx-auto" style="width: 18rem;">
                             <img class="card-img-top" style="border-radius: 25%" src="images/hispanic_activity.jpeg" alt="Hispanic Activity">
                         </div> -->
@@ -572,25 +654,7 @@
                         <br>
                         <h2 class="fw-bold text-center" style="font-size: 20px;">Futuro</h2><br>
 
-                        <p><b>Cena de Acción de Gracias</b><br>
-                            Tendremos nuestra cena de Acción de Gracias el <b>Viernes</b>, <b>17 Noviembre</b> en la tarde.
-                        </p>
 
-                        <p><b>Bautismos en el Templo</b><br>
-                            Los Jóvenes tendrá la oportunidad de participar en bautismos para los muertos en el <b>Templo de Seattle</b> el <b>18 Noviembre 2023</b>. También los miembros están invitados a asistir la sesión del templo a las <b>6:00PM</b>.
-                        </p>
-
-                        <p><b>Charla Fogonera Regional</b><br>
-                            La Estaca de Renton invita a todos los miembros de la Región Norte de Seattle a una Charla Fogonera que se llevará a cabo el <b>Domingo</b>, <b>19 Diciembre 2023</b> a las <b>6:30PM</b> en el
-                            <b><a href="https://maps.app.goo.gl/N4zNGrKoihGojJUbA">
-                               <a href="https://maps.apple.com/?address=19714%20106th%20Ave%20SE,%20Renton,%20WA%20%2098055,%20United%20States&auid=16996486284714800740&ll=47.425381,-122.199240&lsp=9902&q=The%20Church%20of%20Jesus%20Christ%20of%20Latter-day%20Saints">
-                                Centro de Estaca de Renton.
-                               </a></a></b>
-                        </p>
-
-                        <p><b>Devocional Mundial Para Jóvenes Adultos</b><br>
-                            El Élder Quentin L. Cook y su esposa, la hermana Mary Cook, ofrecerán un mensaje especial a los jóvenes adultos de todo el mundo el <b>19 Noviembre</b> a las <b>5:00PM</b>. Para más información: <a href="https://www.churchofjesuschrist.org/media/broadcasts/worldwide-devotional-for-young-adults-elder-cook?lang=spa" target=_blank"">Haga clic aqui</a>.
-                        </p>
 
                         <p><b>Devocional de Navidad de la Primera Presidencia de 2023</b><br>
                             La Presidencia General invita a todos los miembros de la Iglesia, a sus familias y amigos a participar del devocional anual de Navidad de la Primera Presidencia, que se llevará a cabo el <b>Domingo</b>, <b>3 Diciembre 2023</b>. El devocional incluirá
